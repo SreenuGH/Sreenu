@@ -1,0 +1,33 @@
+﻿table{
+    border: 1px solid black;
+}
+
+td {
+    text-align: left;
+}
+
+#lblControl {
+    text-align: left;
+    width: 20px;
+    height: 50px;
+}
+
+#lblControlValue {
+    font-size: 18pt;
+    height: 50px;
+    width: 200px;
+    text-align: left;
+}
+
+#txtboxValue {
+    font-size: 18pt;
+    height: 50px;
+    width: 700px;
+    text-align: left;
+}
+
+.quantity::-webkit-inner-spin-button,
+.quantity::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

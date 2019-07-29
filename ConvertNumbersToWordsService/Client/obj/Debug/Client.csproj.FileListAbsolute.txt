@@ -1,0 +1,112 @@
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\Client.dll.config
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\Client.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\Client.pdb
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\csc.exe
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\csc.exe.config
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\csc.rsp
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\csi.exe
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\csi.exe.config
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\csi.rsp
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.Managed.Core.targets
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.AppContext.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Collections.Immutable.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Console.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.IO.Compression.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.IO.FileSystem.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.IO.Pipes.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Reflection.Metadata.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.AccessControl.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.Claims.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.Principal.Windows.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.ValueTuple.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Xml.XmlDocument.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Xml.XPath.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\vbc.exe
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\vbc.exe.config
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\vbc.rsp
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\VBCSCompiler.exe
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\roslyn\VBCSCompiler.exe.config
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\obj\Debug\Client.csproj.CopyComplete
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\obj\Debug\Client.dll
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\obj\Debug\Client.pdb
+D:\VS 2019 Project Samples\Web Services\ConvertNumbersToWordsService\Client\obj\Debug\Client.csprojAssemblyReference.cache
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\Client.dll.config
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\Client.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\Client.pdb
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\csc.exe
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\csc.exe.config
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\csc.rsp
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\csi.exe
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\csi.exe.config
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\csi.rsp
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.Managed.Core.targets
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.AppContext.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Collections.Immutable.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Console.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.IO.Compression.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.IO.FileSystem.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.IO.Pipes.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Reflection.Metadata.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.AccessControl.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.Claims.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Security.Principal.Windows.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.ValueTuple.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Xml.XmlDocument.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Xml.XPath.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\vbc.exe
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\vbc.exe.config
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\vbc.rsp
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\VBCSCompiler.exe
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\roslyn\VBCSCompiler.exe.config
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\vs samples\ConvertNumbersToWordsService\Client\obj\Debug\Client.csprojAssemblyReference.cache
+D:\vs samples\ConvertNumbersToWordsService\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\vs samples\ConvertNumbersToWordsService\Client\obj\Debug\Client.csproj.CopyComplete
+D:\vs samples\ConvertNumbersToWordsService\Client\obj\Debug\Client.dll
+D:\vs samples\ConvertNumbersToWordsService\Client\obj\Debug\Client.pdb

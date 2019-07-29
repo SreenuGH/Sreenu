@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="Styles.css" />
+    <title>Convert Numbers To Words</title>
+
+
+    <script type="text/javascript">
+        function requiredNameInput(){
+            var x =document.getElementById("txtNameInput").value;
+              if (x == "") {
+                alert("Name must be filled out");
+                return false;
+              }
+        }
+
+        function requriedNumberInput() {
+            var x = document.getElementById("txtNumberInput").value;
+            if (x == "")
+            {
+                alert("Number must be filled out");
+                return false;
+            }
+
+            if (isNaN(x)) {
+                alert("Invalid Number");
+                return false;
+            }
+
+            if (x < 0 || x > 99999999999999.99)
+            {
+               alert("Number must be with in the range of 0 to 99999999999999.99");
+               return false;
+           }
+         }
+
+        function isNumberKey(evt) {
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+                return false;
+           else
+                return true;
+        }
+
+        function getNummberVal() {
+            requiredNameInput();
+            requriedNumberInput();
+
+            var numberVal = document.getElementById("txtNumberInput").value;
+            var xmlHTTP;
+            if (window.XMLHttpRequest) {
+                xmlHTTP = new window.XMLHttpRequest;
+            }
+            else {
+                try {
+                    xmlHTTP = new ActiveXObject("MSXML2.XMLHTTP.3.0");
+                }
+                catch (ex) {
+
+                }
+            }
+            xmlHTTP.open("POST", "https://localhost:44363/ConvertNumbersToWordsService.asmx", true);
+            xmlHTTP.setRequestHeader("Content-Type", "text/xml; charset=utf-8");
+            xmlHTTP.setRequestHeader(
+                "SOAPAction", "http://tempuri.org/ConvertNumbersToWords");
+
+            strRequest = "<?xml version='1.0' encoding='utf-8'?>";
+            strRequest = strRequest + "<soap:Envelope " +
+                "xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' " +
+                "xmlns:xsd='http://www.w3.org/2001/XMLSchema' " +
+                "xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>";
+            strRequest = strRequest + " <soap:Body>";
+            strRequest = strRequest + "<ConvertNumbersToWords xmlns='http://tempuri.org/'><numberValue>" + numberVal + "</numberValue></ConvertNumbersToWords>";
+            strRequest = strRequest + "</soap:Body>";
+            strRequest = strRequest + "</soap:Envelope>";
+
+
+            xmlHTTP.onreadystatechange = function () {
+                if (xmlHTTP.readyState == 4 && xmlHTTP.status == 200) {
+                    document.getElementById("lblNameOutputValue").innerHTML = document.getElementById("txtNameInput").value;
+                    document.getElementById("lblNumberOutputValue").innerHTML = xmlHTTP.responseXML.documentElement.textContent;
+                }
+            }
+            xmlHTTP.send(strRequest);
+        }
+        //alert(xmlHTTP.responseXML.xml);
+        //var resp = unescape(xmlHTTP.responseXML.xml);
+    </script>
+</head>
+<body>
+    <div style="text-align:center">
+        <h2 style="text-align:center">Convert Numbers To Words</h2>
+        <table align="center" cellpadding="2" cellspacing="10" width="1160px">
+            <tr>
+                <td style="width:70px">
+                    <label id="lblInput" width="10px" ><b>Input:</b></label>
+                </td>
+                <td style="width:700px">
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="width:70px">
+                    <label id="lblNameInput">Name:</label>
+                </td>
+                <td style="width:700px">
+                    <input type="text" size="130" id="txtNameInput" onblur="requiredNameInput()" maxlength="100" required/>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70px">
+                    <label id="lblNumberInput">Number:</label>
+                </td>
+                <td style="width:700px">
+                    <input type="text" size="130" onblur="requriedNumberInput()" onkeypress="return isNumberKey(event)" id="txtNumberInput" maxlength="17" required/>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70px">
+                    <label id="lblNumber"></label>
+                </td>
+                <td style="width:700px">
+                    <button type="button"  style="align-self:end"  onclick="getNummberVal()">Apply Conversion (Numbers To Words)</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70px">
+                    <label id="lblOutput"><b>Ouput:</b></label>
+                </td>
+                <td style="width: 700px">
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70px">
+                    <label id="lblNameOutput" >Name:</label>
+                </td>
+                <td style="width:700px;height:40px;">
+                    <label id="lblNameOutputValue"></label>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:70px">
+                    <label id="lblNumberOutput" style="height:40px;">Numbers In Wods:</label>
+                </td>
+                <td style="width:700px;height:40px;">
+                    <label id="lblNumberOutputValue" width="700px"></label>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
