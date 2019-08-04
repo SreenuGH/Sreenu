@@ -1,0 +1,10 @@
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="searchByName" 
+    [(ngModel)] ="searchTerm" />
+</div>
+
+<div *ngFor="let flight of filteredflights"> 
+  <app-display-flight [flight]="flight" [searchTerm]="searchTerm"
+  (notifyDelete)="onDeleteNotification($event)">
+        </app-display-flight>
+</div>

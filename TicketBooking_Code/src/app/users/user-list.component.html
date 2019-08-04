@@ -1,0 +1,10 @@
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="searchByName" 
+    [(ngModel)] ="searchTerm" />
+</div>
+
+<div *ngFor="let user of filteredUsers"> 
+  <app-display-user [user]="user" [searchTerm]="searchTerm"
+  (notifyDelete)="onDeleteNotification($event)">
+        </app-display-user>
+</div>

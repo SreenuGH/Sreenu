@@ -1,0 +1,84 @@
+<div class="panel panel-primary" *ngIf="ticket">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{ticket.fullName}}</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-xs-10">
+                <div class="row vertical-align">
+                    <div class="col-xs-4">
+                        <img class="imageClass" [src]='ticket.photoPath'/>  
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                Gender
+                            </div>    
+                            <div class="col-xs-6">
+                                :{{ticket.gender}}  
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-6">
+                                        Date Of Birth
+                                </div>
+                                <div class="col-xs-6">
+                                    :{{ticket.dateOfBirth}}  
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-6">
+                                        ContactPreference
+                                </div>
+                                <div class="col-xs-6">
+                                    :{{ticket.contactPreference}}  
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-6">
+                                        Phone
+                                </div>
+                                <div class="col-xs-6">
+                                    :{{ticket.phoneNumber}}  
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-6">
+                                        Email
+                                </div>
+                                <div class="col-xs-6">
+                                    :{{ticket.email}}  
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-6">
+                                        Department
+                                </div>
+                                <div class="col-xs-6" [ngSwitch]="ticket.department">
+                                    :
+                                    <span *ngSwitchCase="1">Help Desk</span>      
+                                    <span *ngSwitchCase="2">HR</span>      
+                                    <span *ngSwitchCase="3">IT</span>      
+                                    <span *ngSwitchCase="4">Payroll</span>      
+                                    <span *ngSwitchDefault>N/A</span>      
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-6">
+                                        In Active
+                                </div>
+                                <div class="col-xs-6">
+                                    :{{ticket.isActive}}  
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+        <div class="panel-footer">
+              <a class="btn btn-primary" 
+              [routerLink]="['/ticketlist',{id:ticket.id}]" queryParamsHandling="preserve"               >Back To List</a>  
+              <button class="btn btn-primary pull-right" (click)="viewNextticket()">
+                  View Next ticket
+              </button>
+        </div>
+        </div>

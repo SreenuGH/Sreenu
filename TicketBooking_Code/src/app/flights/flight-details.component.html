@@ -1,0 +1,84 @@
+<div class="panel panel-primary" *ngIf="flight">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{flight.fullName}}</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-xs-10">
+                <div class="row vertical-align">
+                    <div class="col-xs-4">
+                        <img class="imageClass" [src]='flight.photoPath'/>  
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                Gender
+                            </div>    
+                            <div class="col-xs-6">
+                                :{{flight.gender}}  
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-6">
+                                        Date Of Birth
+                                </div>
+                                <div class="col-xs-6">
+                                    :{{flight.dateOfBirth}}  
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-6">
+                                        ContactPreference
+                                </div>
+                                <div class="col-xs-6">
+                                    :{{flight.contactPreference}}  
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-6">
+                                        Phone
+                                </div>
+                                <div class="col-xs-6">
+                                    :{{flight.phoneNumber}}  
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-6">
+                                        Email
+                                </div>
+                                <div class="col-xs-6">
+                                    :{{flight.email}}  
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-6">
+                                        Department
+                                </div>
+                                <div class="col-xs-6" [ngSwitch]="flight.department">
+                                    :
+                                    <span *ngSwitchCase="1">Help Desk</span>      
+                                    <span *ngSwitchCase="2">HR</span>      
+                                    <span *ngSwitchCase="3">IT</span>      
+                                    <span *ngSwitchCase="4">Payroll</span>      
+                                    <span *ngSwitchDefault>N/A</span>      
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-xs-6">
+                                        In Active
+                                </div>
+                                <div class="col-xs-6">
+                                    :{{flight.isActive}}  
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+        <div class="panel-footer">
+              <a class="btn btn-primary" 
+              [routerLink]="['/flightlist',{id:flight.id}]" queryParamsHandling="preserve"               >Back To List</a>  
+              <button class="btn btn-primary pull-right" (click)="viewNextflight()">
+                  View Next flight
+              </button>
+        </div>
+        </div>

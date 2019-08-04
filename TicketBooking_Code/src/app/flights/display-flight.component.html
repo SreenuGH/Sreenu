@@ -1,0 +1,86 @@
+<app-accordian [title]="flight.fullName" 
+[hasJustViewed]="selectedFlightId === flight.id"
+[isHidden]="true">
+    <div class="col-xs-10 myPanelBody">
+        <div class="row vertical-align">
+            <div class="col-xs-4">
+                <img class="imageClass" [src]='flight.photoPath' />
+            </div>
+            <div class="col-xs-8">
+                <div class="row">
+                    <div class="col-xs-6">
+                        Gender
+                    </div>
+                    <div class="col-xs-6">
+                        :{{flight.gender}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Date Of Birth
+                    </div>
+                    <div class="col-xs-6">
+                        :{{flight.dateOfBirth}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        ContactPreference
+                    </div>
+                    <div class="col-xs-6">
+                        :{{flight.contactPreference}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Phone
+                    </div>
+                    <div class="col-xs-6">
+                        :{{flight.phoneNumber}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Email
+                    </div>
+                    <div class="col-xs-6">
+                        :{{flight.email}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Department
+                    </div>
+                    <div class="col-xs-6" [ngSwitch]="flight.department">
+                        :
+                        <span *ngSwitchCase="1">Help Desk</span>
+                        <span *ngSwitchCase="2">HR</span>
+                        <span *ngSwitchCase="3">IT</span>
+                        <span *ngSwitchCase="4">Payroll</span>
+                        <span *ngSwitchDefault>N/A</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        In Active
+                    </div>
+                    <div class="col-xs-6">
+                        :{{flight.isActive}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="myPanelFooter">
+        <button class="btn btn-primary" (click)="viewFlight()">View</button>
+        <button class="btn btn-primary" (click)="editFlight()">Edit</button>
+        <span *ngIf="confirmDelete">
+            <span>Are you sure you want to Delete?</span>
+            <button class="btn btn-danger" (click)="deleteFlight()">Yes</button>
+            <button class="btn btn-primary" (click)="confirmDelete=false">No</button>
+        </span>
+        <span *ngIf="!confirmDelete">
+            <button class="btn btn-danger" (click)="confirmDelete=true">Delete</button>
+        </span>
+    </div>
+</app-accordian>

@@ -1,0 +1,95 @@
+<form #userForm="ngForm" ngNativeValidate (ngSubmit)="saveUser()">
+    <div class="panel panel-primary" *ngIf="user">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{panelTitle}} </h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group" [class.has-error]="fullName.invalid && fullName.touched" [class.has-success]="fullName.valid">
+                <label for="fullName" class="control-label">Full Name:</label>
+                <input required id="fullName" name="fullName" [(ngModel)]="user.fullName" #fullName="ngModel" type="text" class="form-control">
+                <span class="help-block" *ngIf="fullName.invalid && fullName.touched">
+                    Full name is required.
+                </span> 
+            </div> 
+            <div class="form-group">
+                <label>Contact Preference</label>
+                <div class="form-control">
+                    <label class="radio-inline">
+                        <input type="radio" value="phone" name="contactpreference" [(ngModel)]="user.contactPreference">Phone
+                    </label>                    
+                    <label class="radio-inline">
+                        <input type="radio" value="email" name="contactpreference" [(ngModel)]="user.contactPreference">Email
+                        <span class="help-block" *ngIf="contactpreference.invalid && contactpreference.touched">
+                            Contact Preference is required.
+                            </span> 
+                    </label>
+                </div>
+                <div class="form-group" [class.has-error]="email.invalid && email.touched" [class.has-success]="email.valid">
+                    <label for="email">EMail:</label>
+                    <input id="email" required pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" name="email" #email="ngModel" [(ngModel)]="user.email" type="text" class="form-control">
+                    <span class="help-block" *ngIf="email.errors?.required && email.touched">
+                        Email  is required.
+                    </span> 
+                    <span class="help-block" *ngIf="email.errors?.pattern && email.touched">
+                            Email  is invalid.
+                    </span>                     
+                </div>
+                <div class="form-group" >
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input id="phoneNumber" name="phoneNumber" [(ngModel)]="user.phoneNumber" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="form-control">
+                    <label class="radio-inline">
+                        <input type="radio" value="male" name="gender" [(ngModel)]="user.gender">Male
+                    </label>
+                    <label class="radio-inline">
+                            <input type="radio" value="female" name="gender" [(ngModel)]="user.gender">Female
+                        </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-control">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="isActive" [(ngModel)]="user.isActive">Is Active
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="department">
+                    Department 
+                </label>
+                <select id="department" name="department" [(ngModel)]="user.department" class="form-control">
+                    <option *ngFor="let dept of departments" [value]="dept.id">
+                        {{dept.name}}
+                    </option>    
+                </select>
+            </div>  
+            <div class="form-group" >
+                <label for="dateOfBirth">Date Of Birth:</label>
+                <input id="dateOfBirth" name="dateOfBirth" [(ngModel)]="user.dateOfBirth" type="date" class="form-control" bsDatePicker>
+                 <!-- [bsConfig]="datepickerConfig"> -->
+            </div>
+            <div class="form-group" >
+                <label for="photoPath">Photo Path:</label>
+                <input id="photoPath" name="photoPath" [(ngModel)]="user.photoPath" type="text" class="form-control">
+            </div>            
+            <div class="form-group">
+                <button type="button" (click)="togglePhotoPreview()" class="btn btn-primary"
+                *ngIf=" user.photoPath !== '' && user.photoPath !== null" >
+                   {{previewPhoto ? "Hide " : "Show "}}Preview
+                </button>
+            </div>
+            <div class="form-group">
+                <img [src]="user.photoPath" height="200" width="200" *ngIf="previewPhoto">
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="btn-toolbar">
+                <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">Save</button>
+            </div>
+        </div>
+    </div>
+</form>
