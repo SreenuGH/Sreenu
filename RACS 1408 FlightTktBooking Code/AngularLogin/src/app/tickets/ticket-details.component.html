@@ -1,0 +1,117 @@
+<div class="panel panel-primary" *ngIf="ticket">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ticket.fullName}}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="col-xs-10">
+            <div class="row vertical-align">
+                <div class="col-xs-4">
+                    <img class="imageClass" [src]='ticket.photoPath' />
+                </div>
+                <div class="col-xs-8">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Name:
+                        </div>
+                        <div class="col-xs-6">
+                            :{{ticket.fullName}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Passport
+                        </div>
+                        <div class="col-xs-6">
+                            :{{ticket.passportId}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            AirLines Name
+                        </div>
+                        <div class="col-xs-6">
+                            :{{ticket.airlinesName}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Departure City
+                        </div>
+                        <div class="col-xs-6" [ngSwitch]="ticket.departureCity">
+                            <span *ngSwitchCase="1">:Melbourne</span>
+                            <span *ngSwitchCase="2">:Delhi</span>
+                            <span *ngSwitchCase="3">:Hong Kong</span>
+                            <span *ngSwitchCase="4">:Singapore</span>
+                            <span *ngSwitchCase="5">:Thailand</span>
+                            <span *ngSwitchCase="6">:Sydney</span>
+                            <span *ngSwitchDefault>:N/A</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Arrival City
+                        </div>
+                        <div class="col-xs-6" [ngSwitch]="ticket.arrivalCity">
+                            <span *ngSwitchCase="1">:Melbourne</span>
+                            <span *ngSwitchCase="2">:Delhi</span>
+                            <span *ngSwitchCase="3">:Hong Kong</span>
+                            <span *ngSwitchCase="4">:Singapore</span>
+                            <span *ngSwitchCase="5">:Thailand</span>
+                            <span *ngSwitchCase="6">:Sydney</span>
+                            <span *ngSwitchDefault>:N/A</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Price
+                        </div>
+                        <div class="col-xs-6">
+                            :{{ticket.price}}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Gender
+                        </div>
+                        <div class="col-xs-6">
+                            :{{ticket.gender}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Date Of Birth
+                        </div>
+                        <div class="col-xs-6">
+                            :{{ticket.dateOfBirth}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Phone
+                        </div>
+                        <div class="col-xs-6">
+                            :{{ticket.phoneNumber}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Email
+                        </div>
+                        <div class="col-xs-6">
+                            :{{ticket.email}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-primary" [routerLink]="['/ticketlist',{id:ticket.id}]" queryParamsHandling="preserve">Back To
+            List</a>
+        <button class="btn btn-primary pull-right" (click)="viewNextticket()">
+            View Next ticket
+        </button>
+    </div>
+</div>

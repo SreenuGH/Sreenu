@@ -1,0 +1,10 @@
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="searchByPassengerName" 
+    [(ngModel)] ="searchTerm" />
+</div>
+
+<div *ngFor="let ticket of filteredTickets"> 
+  <app-display-ticket [ticket]="ticket" [searchTerm]="searchTerm"
+  (notifyDelete)="onDeleteNotification($event)">
+        </app-display-ticket>
+</div>

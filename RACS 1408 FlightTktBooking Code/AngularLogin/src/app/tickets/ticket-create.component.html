@@ -1,0 +1,113 @@
+<form #ticketForm="ngForm" ngNativeValidate (ngSubmit)="saveTicket()">
+    <div class="panel panel-primary" *ngIf="ticket">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{panelTitle}} </h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group" [class.has-error]="fullName.invalid && fullName.touched" [class.has-success]="fullName.valid">
+                <label for="fullName" class="control-label">Name:</label>
+                <input required id="fullName" name="fullName" [(ngModel)]="ticket.fullName" #fullName="ngModel" type="text" class="form-control">
+                <span class="help-block" *ngIf="fullName.invalid && fullName.touched">
+                    Full name is required.
+                </span> 
+            </div> 
+            <div class="form-group" [class.has-error]="passportId.invalid && passportId.touched" [class.has-success]="passportId.valid">
+                    <label for="passportId" class="control-label">Passport Id:</label>
+                    <input required id="passportId" name="passportId" [(ngModel)]="ticket.passportId" #passportId="ngModel" type="text" class="form-control">
+                    <span class="help-block" *ngIf="passportId.invalid && passportId.touched">
+                        Passport-ID is required.
+                    </span> 
+                </div> 
+            <div class="form-group" [class.has-error]="airlinesName.invalid && airlinesName.touched" [class.has-success]="airlinesName.valid">
+                    <label for="airlinesName" class="control-label">Airlines Name:</label>
+                    <input required id="airlinesName" name="airlinesName" [(ngModel)]="ticket.airlinesName" #airlinesName="ngModel" type="text" class="form-control">
+                    <span class="help-block" *ngIf="airlinesName.invalid && airlinesName.touched">
+                        Airlines Name is required.
+                    </span> 
+                </div> 
+            <div class="form-group"[class.has-error]="departureCity.invalid && departureCity.touched" [class.has-success]="departureCity.valid">
+                <label for="departureCity">
+                    Departure City
+                </label>
+                <select required id="departureCity" name="departureCity" [(ngModel)]="ticket.departureCity" #departureCity="ngModel" class="form-control">
+                    <option *ngFor="let city of cities" [value]="city.id">
+                        {{city.name}}
+                    </option>    
+                </select>
+            </div>  
+            <div class="form-group" [class.has-error]="arrivalCity.invalid && arrivalCity.touched" [class.has-success]="arrivalCity.valid">
+                <label for="arrivalCity">
+                    Arrival City
+                </label>
+                <select required id="arrivalCity" name="arrivalCity" [(ngModel)]="ticket.arrivalCity" #arrivalCity="ngModel" class="form-control">
+                    <option *ngFor="let city of cities" [value]="city.id">
+                        {{city.name}}
+                    </option>    
+                </select>
+            </div> 
+
+            <div class="form-group" [class.has-error]="price.invalid && price.touched" [class.has-success]="price.valid">
+                    <label for="price" class="control-label">Price:</label>
+                    <input required id="price" name="price" [(ngModel)]="ticket.price" #price="ngModel" type="text" class="form-control">
+                    <span class="help-block" *ngIf="price.invalid && price.touched">
+                        Price is required.
+                    </span> 
+                </div> 
+            <div class="form-group" [class.has-error]="email.invalid && email.touched" [class.has-success]="email.valid">
+                <label for="email">Email:</label>
+                <input required id="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" name="email"
+                    [(ngModel)]="ticket.email" #email="ngModel" type="text" class="form-control">
+                <span class="help-block" *ngIf="email.errors?.required && email.touched">
+                    Email is required.
+                </span>
+                <span class="help-block" *ngIf="email.errors?.pattern && email.touched">
+                    Email is invalid.
+                </span>
+            </div>
+            <div class="form-group" [class.has-error]="phoneNumber.invalid && phoneNumber.touched" [class.has-success]="phoneNumber.valid">
+                <label for="phoneNumber">Phone:</label>
+                <input required id="phoneNumber" pattern="^(\+\d{2}[ \-]{0,1}){0,1}(((\({0,1}[ \-]{0,1})0{0,1}\){0,1}[2|3|7|8]{1}\){0,1}[ \-]*(\d{4}[ \-]{0,1}\d{4}))|(1[ \-]{0,1}(300|800|900|902)[ \-]{0,1}((\d{6})|(\d{3}[ \-]{0,1}\d{3})))|(13[ \-]{0,1}([\d \-]{5})|((\({0,1}[ \-]{0,1})0{0,1}\){0,1}4{1}[\d \-]{8,10})))$" name="phoneNumber"
+                    [(ngModel)]="ticket.phoneNumber" #phoneNumber="ngModel" type="text" class="form-control">
+                <span class="help-block" *ngIf="phoneNumber.errors?.required && phoneNumber.touched">
+                    Phone is required.
+                </span>
+                <span class="help-block" *ngIf="phoneNumber.errors?.pattern && phoneNumber.touched">
+                    Phone is invalid.
+                </span>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="form-control">
+                    <label class="radio-inline">
+                        <input type="radio" value="male" name="gender" [(ngModel)]="ticket.gender">Male
+                    </label>
+                    <label class="radio-inline">
+                            <input type="radio" value="female" name="gender" [(ngModel)]="ticket.gender">Female
+                        </label>
+                </div>
+            </div>
+            <div class="form-group" >
+                <label for="dateOfBirth">Date Of Birth:</label>
+                <input id="dateOfBirth" name="dateOfBirth" [(ngModel)]="ticket.dateOfBirth" type="date" class="form-control" bsDatePicker>
+            </div>
+            <div class="form-group" >
+                <label for="photoPath">Photo Path:</label>
+                <input id="photoPath" name="photoPath" [(ngModel)]="ticket.photoPath" type="text" class="form-control">
+            </div>            
+            <div class="form-group">
+                <button type="button" (click)="togglePhotoPreview()" class="btn btn-primary"
+                *ngIf=" ticket.photoPath !== '' && ticket.photoPath !== null" >
+                   {{previewPhoto ? "Hide " : "Show "}}Preview
+                </button>
+            </div>
+            <div class="form-group">
+                <img [src]="ticket.photoPath" height="200" width="200" *ngIf="previewPhoto">
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="btn-toolbar">
+                <button class="btn btn-primary" type="submit" [disabled]="ticketForm.invalid">Save</button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,75 @@
+<form #flightForm="ngForm" ngNativeValidate (ngSubmit)="saveFlight()">
+    <div class="panel panel-primary" *ngIf="flight">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{panelTitle}} </h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group" [class.has-error]="fullName.invalid && fullName.touched" [class.has-success]="fullName.valid">
+                <label for="fullName" class="control-label">Airlines Name:</label>
+                <input required id="fullName" name="fullName" [(ngModel)]="flight.fullName" #fullName="ngModel" type="text" class="form-control">
+                <span class="help-block" *ngIf="fullName.invalid && fullName.touched">
+                    Airlines Name is required.
+                </span> 
+            </div> 
+            <div class="form-group" [class.has-error]="startTime.invalid && startTime.touched" [class.has-success]="startTime.valid">
+                <label for="startTime">Start Time:</label>
+                <input required id="startTime" name="startTime" [(ngModel)]="flight.startTime" type="time" #startTime="ngModel" class="form-control" bsDatePicker>
+                <span class="help-block" *ngIf="startTime.invalid && startTime.touched">
+                    Start Time is required.
+                </span> 
+            </div>
+            <div class="form-group" [class.has-error]="endTime.invalid && endTime.touched" [class.has-success]="endTime.valid">
+                <label for="endTime">End Time:</label>
+                <input required id="endTime" name="endTime" [(ngModel)]="flight.endTime" type="time" #endTime="ngModel" class="form-control" bsDatePicker>
+                <span class="help-block" *ngIf="endTime.invalid && endTime.touched">
+                    End Time is required.
+                </span> 
+            </div>
+            <div class="form-group" [class.has-error]="passengerCapacity.invalid && passengerCapacity.touched" [class.has-success]="passengerCapacity.valid">
+                <label for="passengerCapacity" class="control-label">Passenger Capacity:</label>
+                <input required id="passengerCapacity" name="passengerCapacity" [(ngModel)]="flight.passengerCapacity" #passengerCapacity="ngModel" type="number" min="1" max="10" class="form-control">
+                <span class="help-block" *ngIf="passengerCapacity.invalid && passengerCapacity.touched">
+                    Passenger Capacity is required.
+                </span> 
+            </div> 
+            <div class="form-group"[class.has-error]="departureCity.invalid && departureCity.touched" [class.has-success]="departureCity.valid">
+                <label for="departureCity">
+                    Departure City
+                </label>
+                <select required id="departureCity" name="departureCity" [(ngModel)]="flight.departureCity" #departureCity="ngModel" class="form-control">
+                    <option *ngFor="let city of cities" [value]="city.id">
+                        {{city.name}}
+                    </option>    
+                </select>
+            </div>  
+            <div class="form-group" [class.has-error]="arrivalCity.invalid && arrivalCity.touched" [class.has-success]="arrivalCity.valid">
+                <label for="arrivalCity">
+                    Arrival City
+                </label>
+                <select required id="arrivalCity" name="arrivalCity" [(ngModel)]="flight.arrivalCity" #arrivalCity="ngModel" class="form-control">
+                    <option *ngFor="let city of cities" [value]="city.id">
+                        {{city.name}}
+                    </option>    
+                </select>
+              </div>  
+            <div class="form-group" >
+                <label for="photoPath">Photo Path:</label>
+                <input id="photoPath" name="photoPath" [(ngModel)]="flight.photoPath" type="text" class="form-control">
+            </div>            
+            <div class="form-group">
+                <button type="button" (click)="togglePhotoPreview()" class="btn btn-primary"
+                *ngIf=" flight.photoPath !== '' && flight.photoPath !== null" >
+                   {{previewPhoto ? "Hide " : "Show "}}Preview
+                </button>
+            </div>
+            <div class="form-group">
+                <img [src]="flight.photoPath" height="200" width="200" *ngIf="previewPhoto">
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="btn-toolbar">
+                <button class="btn btn-primary" type="submit" [disabled]="flightForm.invalid">Save</button>
+            </div>
+        </div>
+    </div>
+</form>

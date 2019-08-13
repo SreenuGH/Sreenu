@@ -1,0 +1,93 @@
+<app-accordian [title]="flight.fullName" 
+[hasJustViewed]="selectedFlightId === flight.id"
+[isHidden]="true">
+    <div class="col-xs-10 myPanelBody">
+        <div class="row vertical-align">
+            <div class="col-xs-4">
+                <img class="imageClass" [src]='flight.photoPath' />
+            </div>
+            <div class="col-xs-8">
+                <div class="row">
+                    <div class="col-xs-6">
+                        Flight Number
+                    </div>
+                    <div class="col-xs-6">
+                        :{{flight.id}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Flight Name
+                    </div>
+                    <div class="col-xs-6">
+                        :{{flight.fullName}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Start Time
+                    </div>
+                    <div class="col-xs-6">
+                        :{{flight.startTime}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        End Time
+                    </div>
+                    <div class="col-xs-6">
+                        :{{flight.endTime}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Passenger Capacity
+                    </div>
+                    <div class="col-xs-6">
+                        :{{flight.passengerCapacity}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Departure City
+                    </div>
+                    <div class="col-xs-6" [ngSwitch]="flight.departureCity">
+                        <span *ngSwitchCase="1">:Melbourne</span>      
+                        <span *ngSwitchCase="2">:Delhi</span>      
+                        <span *ngSwitchCase="3">:Hong Kong</span>     
+                        <span *ngSwitchCase="4">:Singapore</span>      
+                        <span *ngSwitchCase="5">:Thailand</span>    
+                        <span *ngSwitchCase="6">:Sydney</span>    
+                        <span *ngSwitchDefault>:N/A</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Arrival City
+                    </div>
+                    <div class="col-xs-6" [ngSwitch]="flight.arrivalCity">
+                        <span *ngSwitchCase="1">:Melbourne</span>      
+                        <span *ngSwitchCase="2">:Delhi</span>      
+                        <span *ngSwitchCase="3">:Hong Kong</span>     
+                        <span *ngSwitchCase="4">:Singapore</span>      
+                        <span *ngSwitchCase="5">:Thailand</span>    
+                        <span *ngSwitchCase="6">:Sydney</span>    
+                        <span *ngSwitchDefault>:N/A</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="myPanelFooter">
+        <button class="btn btn-primary" (click)="viewFlight()">View</button>
+        <button class="btn btn-primary" (click)="editFlight()">Edit</button>
+        <span *ngIf="confirmDelete">
+            <span>Are you sure you want to Delete?</span>
+            <button class="btn btn-danger" (click)="deleteFlight()">Yes</button>
+            <button class="btn btn-primary" (click)="confirmDelete=false">No</button>
+        </span>
+        <span *ngIf="!confirmDelete">
+            <button class="btn btn-danger" (click)="confirmDelete=true">Delete</button>
+        </span>
+    </div>
+</app-accordian>

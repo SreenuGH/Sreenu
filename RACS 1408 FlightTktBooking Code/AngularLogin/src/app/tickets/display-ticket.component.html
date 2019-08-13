@@ -1,0 +1,116 @@
+<app-accordian [title]="ticket.fullName" [hasJustViewed]="selectedTicketId === ticket.id" [isHidden]="true">
+    <div class="col-xs-10 myPanelBody">
+        <div class="row vertical-align">
+            <div class="col-xs-4">
+                <img class="imageClass" [src]='ticket.photoPath' />
+            </div>
+            <div class="col-xs-8">
+                <div class="row">
+                    <div class="col-xs-6">
+                        Name
+                    </div>
+                    <div class="col-xs-6">
+                        :{{ticket.fullName}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Passport
+                    </div>
+                    <div class="col-xs-6">
+                        :{{ticket.passportId}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Airlines Name
+                    </div>
+                    <div class="col-xs-6">
+                        :{{ticket.airlinesName}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Departure City
+                    </div>
+                    <div class="col-xs-6" [ngSwitch]="ticket.departureCity">
+                        <span *ngSwitchCase="1">:Melbourne</span>
+                        <span *ngSwitchCase="2">:Delhi</span>
+                        <span *ngSwitchCase="3">:Hong Kong</span>
+                        <span *ngSwitchCase="4">:Singapore</span>
+                        <span *ngSwitchCase="5">:Thailand</span>
+                        <span *ngSwitchCase="6">:Sydney</span>
+                        <span *ngSwitchDefault>:N/A</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Arrival City
+                    </div>
+                    <div class="col-xs-6" [ngSwitch]="ticket.arrivalCity">
+                        <span *ngSwitchCase="1">:Melbourne</span>
+                        <span *ngSwitchCase="2">:Delhi</span>
+                        <span *ngSwitchCase="3">:Hong Kong</span>
+                        <span *ngSwitchCase="4">:Singapore</span>
+                        <span *ngSwitchCase="5">:Thailand</span>
+                        <span *ngSwitchCase="6">:Sydney</span>
+                        <span *ngSwitchDefault>:N/A</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        Price
+                    </div>
+                    <div class="col-xs-6">
+                        :{{ticket.price}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Gender
+                    </div>
+                    <div class="col-xs-6">
+                        :{{ticket.gender}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Date Of Birth
+                    </div>
+                    <div class="col-xs-6">
+                        :{{ticket.dateOfBirth}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Phone
+                    </div>
+                    <div class="col-xs-6">
+                        :{{ticket.phoneNumber}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        Email
+                    </div>
+                    <div class="col-xs-6">
+                        :{{ticket.email}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="myPanelFooter">
+        <button class="btn btn-primary" (click)="viewTicket()">View</button>
+        <button class="btn btn-primary" (click)="editTicket()">Edit</button>
+        <span *ngIf="confirmDelete">
+            <span>Are you sure you want to Delete?</span>
+            <button class="btn btn-danger" (click)="deleteTicket()">Yes</button>
+            <button class="btn btn-primary" (click)="confirmDelete=false">No</button>
+        </span>
+        <span *ngIf="!confirmDelete">
+            <button class="btn btn-danger" (click)="confirmDelete=true">Delete</button>
+        </span>
+    </div>
+</app-accordian>
